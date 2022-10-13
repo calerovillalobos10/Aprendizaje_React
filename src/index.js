@@ -8,11 +8,24 @@ import Saludar from './Saludar';
 
 const root = ReactDom.createRoot(document.getElementById('root'));
 
+const handleChange = (event) => {
+    console.log(event.target.value + '...');
+}
+
 root.render(<>
 
-    <TaskCard ready={true}/>
+    <TaskCard ready={true} />
     <Saludar />
+    <Button text='Click me' name='Thomas' />
+    <input id='Hola' onChange={handleChange} onDoubleClick={()=>{console.log('doble click');}}/>
 
+    <form onSubmit={(event)=>{ 
+        event.preventDefault();
+        console.log('Enviado');
+        }}>
+        <h1>Registro de usuario</h1>
+        <button>Enviar</button>
+    </form>
     {/* <Button text='Click me' name='Thomas'/>
     <Button text='Pay'/>
     <Button text='Go to'/> */}

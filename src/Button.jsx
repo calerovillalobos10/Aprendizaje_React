@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 
 export const Button = ({text, name}) => {
-    return <button>
+    return <button onClick={()=>{
+        console.log('Hola Mundo');
+    }}>
         {text} - {name}
     </button>
 }
