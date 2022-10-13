@@ -9,7 +9,7 @@ const root = ReactDom.createRoot(document.getElementById('root'));
 
 root.render(<>
 
-    <TaskCard ready={false}/>
+    <TaskCard ready={true}/>
 
     {/* <Button text='Click me' name='Thomas'/>
     <Button text='Pay'/>

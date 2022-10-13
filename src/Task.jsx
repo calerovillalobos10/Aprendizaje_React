@@ -1,9 +1,11 @@
 import './task.css';
 
-export const TaskCard = (ready) => {
+export const TaskCard = ({ ready }) => {
 
     return <div className='card'>
         <h1>Mi primer tarea</h1>
-        <span>{ready ? 'Tarea realizada' : 'Tarea pendiente'}</span>
+        <span className={ready ? 'bg-green' : 'bg-red'}>
+            {ready ? 'Tarea realizada' : 'Tarea pendiente'}
+        </span>
     </div>
 }
