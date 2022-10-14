@@ -9,11 +9,30 @@ import Post from './Posts';
 
 const root = ReactDom.createRoot(document.getElementById('root'));
 
-const handleChange = (event) => {
-    console.log(event.target.value + '...');
-}
+const users = [
+    {
+        id: 1,
+        name: 'Ryan ray',
+        image: 'https://robohash.org/user1',
+    },
+    {
+        id: 2,
+        name: 'Joe',
+        image: 'https://robohash.org/user2',
+    },
+    {
+        id: 3,
+        name: 'Marcos',
+        image: 'https://robohash.org/user3',
+    },
+];
 
 root.render(<>
-
-    <Post />
+    {users.map((user, index) => {
+        return <div key={index}>
+            <h1>{user.name}</h1>
+            <img src={user.image}/>
+        </div>;
+    })}
+    {/* <Post /> */}
 </>);
